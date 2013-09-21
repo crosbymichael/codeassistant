@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://code-assistant.com">
+  <Template>print "Hello World"</Template>
+  <Name>Python</Name>
+  <Extension>py</Extension>
+  <Type>Interpreted</Type>
+  <Syntax>Python.xshd</Syntax>
+  <Arguments>-i {inputPath}</Arguments>
+  <Resources>
+    <Resource IsDefault="true">
+      <Path>C:\Python27\python.exe</Path>
+    </Resource>
+  </Resources>
+</Language>

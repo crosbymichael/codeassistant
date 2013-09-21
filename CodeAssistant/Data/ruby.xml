@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://code-assistant.com">
+  <Template>puts "Hello World"</Template>
+  <Name>Ruby</Name>
+  <Extension>rb</Extension>
+  <Type>Interpreted</Type>
+  <Syntax>Ruby.xshd</Syntax>
+  <Arguments>{inputPath}</Arguments>
+  <Resources>
+    <Resource IsDefault="true">
+      <Path>C:\Ruby193\bin\ruby.exe</Path>
+    </Resource>
+  </Resources>
+</Language>

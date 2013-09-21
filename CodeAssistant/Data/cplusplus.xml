@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://code-assistant.com">
+  <Template>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+      cout &lt;&lt; "Hello World." &lt;&lt; endl;
+      return 0;
+}
+  </Template>
+  <Name>C++</Name>
+  <Extension>cpp</Extension>
+  <Type>Compiled</Type>
+  <Resources>
+    <Resource IsDefault="true">
+      <Path>C:\Program Files\CodeBlocks\MinGW\bin\g++.exe</Path>
+    </Resource>
+  </Resources>
+  <Arguments>{inputPath} -o {outputPath}</Arguments>
+</Language>

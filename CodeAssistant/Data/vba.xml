@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://code-assistant.com">
+  <Template>Imports System
+
+Module Main
+
+    Sub Main()
+		Console.WriteLine("Hello World")
+    End Sub
+
+End Module</Template>
+  <Name>VB.NET</Name>
+  <Extension>vb</Extension>
+  <Type>Compiled</Type>
+  <Resources>
+    <Resource IsDefault="true">
+      <Path>C:\Windows\Microsoft.NET\Framework\v3.5\vbc.exe</Path>
+    </Resource>
+  </Resources>
+  <Arguments>/define:DEBUG /warn:4 /nologo /debug /out:{outputPath} {inputPath}</Arguments>
+</Language>

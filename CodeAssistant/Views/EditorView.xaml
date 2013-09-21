@@ -1,0 +1,96 @@
+﻿<Window x:Class="CodeAssistant.Views.EditorView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:MVVM_Async.Commands;assembly=MVVM-Async"
+    xmlns:m="clr-namespace:CodeAssistant.Content"
+    xmlns:controls="clr-namespace:CodeAssistant.Controls"
+    xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+    Title="{x:Static m:CMSContent.EditorTitle}" 
+    Height="684" Width="650" 
+    ResizeMode="CanMinimize">
+    
+    <Window.Resources>
+        <c:CommandReference x:Key="Loaded" Command="{Binding WindowOpen}" />
+    </Window.Resources>
+    
+    <Window.Background>
+        <ImageBrush ImageSource="/CodeAssistant;component/Assets/ca-background.png"></ImageBrush>
+    </Window.Background>
+    
+    <StackPanel Width="Auto" Height="Auto" Orientation="Vertical" >
+        <controls:ArgumentsControl x:Name="argumentsControl" Height="0" Width="300">
+            <!--<controls:ArgumentsControl.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black"
+                                        Direction="315"
+                                        Softness="0.5"
+                                        ShadowDepth="10"
+                                        Opacity="0.5"></DropShadowBitmapEffect>
+            </controls:ArgumentsControl.BitmapEffect>-->
+        </controls:ArgumentsControl>
+        
+        <StackPanel Width="Auto" Height="42" Orientation="Horizontal" Name="controlsPanel"  >
+            <ComboBox Name="languageSelection" Width="112" Height="24" 
+                      SelectedIndex="{Binding LanguageIndex}" 
+                      Margin="5" ItemsSource="{Binding Languages}"  />
+            <Button x:Name="newDocument" Command="{Binding Open}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <Image Source="/CodeAssistant;component/Assets/openDocument.png" 
+                               Width="32" 
+                               Height="32"
+                               Margin="2"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="saveButton" Command="{Binding Save}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <Image Source="/CodeAssistant;component/Assets/SaveAs.png" 
+                               Width="32" 
+                               Height="32"
+                               Margin="2"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Rectangle Width="375" />
+            <Button x:Name="executeButton" Command="{Binding Execute}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <Image Source="/CodeAssistant;component/Assets/runButton.png" 
+                               Width="32" 
+                               Height="32"
+                               Margin="2"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="stopButton" Command="{Binding Stop}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <Image Source="/CodeAssistant;component/Assets/stopButton.png" 
+                               Width="32" 
+                               Height="32"
+                               Margin="2"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+        <avalonEdit:TextEditor Height="412" Width="Auto"  Name="codeEditor"  Margin="5" 
+                               FontFamily="Consolas" FontSize="11" Document="{Binding Code}"
+                               ShowLineNumbers="True" SyntaxHighlighting="{Binding Syntax}"
+                               Background="White" />
+        <TextBox Name="codeOutput" Width="Auto" Height="158" TextWrapping="Wrap"
+                 Margin="5" IsReadOnly="True" IsEnabled="True"
+                 Text="{Binding Output}" />
+        <DockPanel Name="statusBarDock" Width="Auto" Height="Auto" 
+                   LastChildFill="False" Margin="0,2,4,0" >
+        </DockPanel>
+    </StackPanel>
+</Window>

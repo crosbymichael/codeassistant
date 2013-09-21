@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://code-assistant.com">
+  <Template>print "Hello World";</Template>
+  <Name>Perl</Name>
+  <Extension>pl</Extension>
+  <Type>Interpreted</Type>
+  <Arguments>{inputPath}</Arguments>
+  <Resources>
+    <Resource IsDefault="true">
+      <Path>C:\strawberry\perl\bin\perl.exe</Path>
+    </Resource>
+  </Resources>
+</Language>

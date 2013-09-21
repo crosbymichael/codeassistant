@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://code-assistant.com">
+  <Type>Compiled</Type>
+  <Resources>
+    <Resource IsDefault="true">
+      <Path>C:\Program Files\CodeBlocks\MinGW\bin\gcc.exe</Path>
+    </Resource>
+  </Resources>
+  <Template>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main()
+{
+  printf("Hello world!\n");
+  return 0;
+}
+  </Template>
+  <Name>C</Name>
+  <Extension>c</Extension>
+  <Arguments>{inputPath} -o {outputPath}</Arguments>
+</Language>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0"?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://code-assistant.com">
+  <Template>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace CodeAssistant 
+{
+
+    class MainClass 
+    {
+
+        public static void Main (string[] args) 
+        {
+            Console.WriteLine("Hello World");
+        }
+    }
+}
+  </Template>
+  <Name>C#</Name>
+  <Extension>cs</Extension>
+  <Type>Compiled</Type>
+  <Resources>
+    <Resource IsDefault="true">
+      <Path>C:\Windows\Microsoft.NET\Framework\v3.5\csc.exe</Path>
+    </Resource>
+  </Resources>
+  <Arguments>/define:DEBUG /warn:4 /nologo /debug /out:{outputPath} {inputPath}</Arguments>
+</Language>

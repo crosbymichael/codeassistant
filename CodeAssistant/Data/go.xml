@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://code-assistant.com">
+  <Template>package main
+
+import "fmt"
+
+func main() {
+  fmt.Printf("Hello From Go")
+}
+  </Template>
+  <Name>Go</Name>
+  <Extension>go</Extension>
+  <Type>Interpreted</Type>
+  <Resources>
+    <Resource IsDefault="true">
+      <Path>C:\Go\bin\go.exe</Path>
+    </Resource>
+  </Resources>
+  <Arguments>run {inputPath}</Arguments>
+</Language>

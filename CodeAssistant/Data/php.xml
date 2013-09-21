@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://code-assistant.com">
+  <Template>&lt;?php
+	echo "Hello world";
+?&gt;</Template>
+  <Name>Php</Name>
+  <Extension>php</Extension>
+  <Arguments>{inputPath}</Arguments>
+  <Resources>
+    <Resource IsDefault="false">
+      <Path>C:\wamp\bin\php\php5.3.8\php.exe</Path>
+    </Resource>
+    <Resource IsDefault="false">
+      <Path>C:\php\php.exe</Path>
+    </Resource>
+    <Resource IsDefault="true">
+      <Path>C:\php5\php.exe</Path>
+    </Resource>
+  </Resources>
+  <Type>Interpreted</Type>
+</Language>
